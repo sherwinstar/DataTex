@@ -222,7 +222,7 @@ NotesDocuments::NotesDocuments(QWidget *parent, bool editMode, QStringList metad
             this, &NotesDocuments::filesSelected_SelectionChanged);
     connect(ui->SourceCode,&QPushButton::clicked,this,[&](){ui->stackedWidget->setCurrentIndex(0);});
     connect(ui->PdfPreview,&QPushButton::toggled,this,[&](bool checked){
-        ui->splitter_3->setSizes(QList<int>({ui->splitter_3->height()*0.5*(checked),ui->splitter_3->height()*0.5*checked}));
+        ui->splitter_3->setSizes(QList<int>({(int)(ui->splitter_3->height()*0.5*(checked)),(int)(ui->splitter_3->height()*0.5*checked)}));
     });
     connect(ui->DocViewerButton,&QPushButton::clicked,this,[&](){ui->stackedWidget->setCurrentIndex(1);});
 
@@ -304,7 +304,7 @@ NotesDocuments::NotesDocuments(QWidget *parent, bool editMode, QStringList metad
     toolbar->ShowPdf->setChecked(true);
     ui->horizontalLayout_5->insertWidget(3,toolbar);
     connect(toolbar->ShowPdf,&QAction::triggered,this,[&](bool checked){
-        ui->splitter_3->setSizes(QList<int>({ui->splitter_3->height()*0.5*(checked),ui->splitter_3->height()*0.5*checked}));
+        ui->splitter_3->setSizes(QList<int>({(int)(ui->splitter_3->height()*0.5*(checked)),(int)(ui->splitter_3->height()*0.5*checked)}));
     });
 //    connect(toolbar,SIGNAL(Build()),this,SLOT(onRebuild()));
     toolbar->show();

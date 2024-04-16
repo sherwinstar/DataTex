@@ -385,9 +385,9 @@ DataTex::DataTex(QWidget *parent)
     ui->OpenDatabasesTreeWidget->expandAll();
     ui->splitter_3->setSizes(QList<int>({400, 1}));
     ui->splitter_2->setSizes(QList<int>({400, 1}));
-    ui->splitter_4->setSizes(QList<int>{floor(0.5*ui->splitter_4->size().width()),floor(0.5*ui->splitter_4->size().width())});
+    ui->splitter_4->setSizes(QList<int>{(int)(floor(0.5*ui->splitter_4->size().width())),(int)(floor(0.5*ui->splitter_4->size().width()))});
     ui->splitter_5->setSizes(QList<int>({400, 1}));
-    ui->splitter_6->setSizes(QList<int>{floor(0.5*ui->splitter_6->size().width()),floor(0.5*ui->splitter_6->size().width())});
+    ui->splitter_6->setSizes(QList<int>{(int)(floor(0.5*ui->splitter_6->size().width())),(int)(floor(0.5*ui->splitter_6->size().width()))});
     ui->splitter_7->setSizes(QList<int>({300, 300}));
     ui->splitter_8->setStretchFactor(1, 3);
     ui->splitter_11->setSizes(QList<int>({400, 1}));
@@ -619,7 +619,7 @@ DataTex::DataTex(QWidget *parent)
         ui->CurrentBaseLabel->setText(GlobalFilesDatabaseListNames[CurrentDataBase_basename]+" : "+QString::number(files)+tr(" files"));
     });
     connect(ui->ShowDescription,&QPushButton::toggled,this,[=](bool checked){
-        ui->splitter_3->setSizes(QList<int>({(1-0.2*checked)*height(),0.2*checked*height()}));
+        ui->splitter_3->setSizes(QList<int>({(int)((1-0.2*checked)*height()),(int)(0.2*checked*height())}));
         if(checked){
             ui->stackedWidget_8->setCurrentIndex(0);
 //            ShowFileDescription->setChecked(checked);
@@ -656,12 +656,12 @@ void DataTex::CreateMenus_Actions()
 
     ViewMenu = menuBar()->addMenu(tr("&View"));
     ShowFileDescription = CreateNewAction(ViewMenu,ShowFileDescription,[=](){
-            ui->splitter_3->setSizes(QList<int>{floor(0.75*ui->splitter_3->size().height()),floor(0.25*ui->splitter_3->size().height())*ShowFileDescription->isChecked()});
+            ui->splitter_3->setSizes(QList<int>{(int)(floor(0.75*ui->splitter_3->size().height())),(int)(floor(0.25*ui->splitter_3->size().height()))*ShowFileDescription->isChecked()});
         },"",QIcon(""),tr("File description"));
     ShowFileDescription->setCheckable(true);
     ShowFileDescription->setChecked(true);
     ShowFileTabWidget = CreateNewAction(ViewMenu,ShowFileTabWidget,[=](){
-            ui->splitter_4->setSizes(QList<int>{floor(0.5*ui->splitter_4->size().width()),floor(0.5*ui->splitter_4->size().width())*ShowFileTabWidget->isChecked()});
+            ui->splitter_4->setSizes(QList<int>{(int)(floor(0.5*ui->splitter_4->size().width())),(int)(floor(0.5*ui->splitter_4->size().width()))*ShowFileTabWidget->isChecked()});
         },"",QIcon(""),tr("File info"));
     ShowFileTabWidget->setCheckable(true);
     ShowFileTabWidget->setChecked(true);
@@ -669,7 +669,7 @@ void DataTex::CreateMenus_Actions()
             bool checked = SplitTexAndPdf->isChecked();
             QSplitter *splitter = new QSplitter(Qt::Horizontal,this);
             if(checked){
-                ui->splitter_4->setSizes(QList<int>{floor(0.25*ui->splitter_4->size().width()),floor(0.75*ui->splitter_4->size().width())*checked});
+                ui->splitter_4->setSizes(QList<int>{(int)(floor(0.25*ui->splitter_4->size().width())),(int)(floor(0.75*ui->splitter_4->size().width()))*checked});
                 ui->gridLayout_2->removeWidget(LatexFileView);
                 ui->gridLayout_9->removeWidget(ui->FileEdit);
                 ui->gridLayout_9->addWidget(splitter,0,0);
@@ -692,13 +692,13 @@ void DataTex::CreateMenus_Actions()
     ViewMenu->addSeparator();
 
     ShowDocDescription = CreateNewAction(ViewMenu,ShowDocDescription,[=](){
-            ui->splitter_2->setSizes(QList<int>{floor(0.75*ui->splitter_2->size().height()),floor(0.25*ui->splitter_2->size().height())*ShowDocDescription->isChecked()});
+            ui->splitter_2->setSizes(QList<int>{(int)(floor(0.75*ui->splitter_2->size().height())),(int)(floor(0.25*ui->splitter_2->size().height()))*ShowDocDescription->isChecked()});
         },"",QIcon(""),tr("Doc description"));
     ShowDocDescription->setCheckable(true);
     ShowDocDescription->setChecked(true);
     ShowDocTabWidget = CreateNewAction(ViewMenu,ShowDocTabWidget,[=](){
             ui->DocDescription->setHidden(!ShowDocTabWidget->isChecked());
-            ui->splitter_6->setSizes(QList<int>{floor(0.5*ui->splitter_6->size().width()),floor(0.5*ui->splitter_6->size().width())*ShowDocTabWidget->isChecked()});
+            ui->splitter_6->setSizes(QList<int>{(int)(floor(0.5*ui->splitter_6->size().width())),(int)(floor(0.5*ui->splitter_6->size().width()))*ShowDocTabWidget->isChecked()});
         },"",QIcon(""),tr("Doc info"));
     ShowDocTabWidget->setCheckable(true);
     ShowDocTabWidget->setChecked(true);
@@ -3634,7 +3634,7 @@ void DataTex::CreateCustomTagWidget()
         qDebug()<<list;
     });
     connect(ui->FilesTagFilter, &QPushButton::toggled, this, [=](bool checked){
-        ui->splitter_3->setSizes(QList<int>({(1-0.2*checked)*height(),0.2*checked*height()}));
+        ui->splitter_3->setSizes(QList<int>({(int)((1-0.2*checked)*height()),(int)(0.2*checked*height())}));
         if(checked){ui->stackedWidget_8->setCurrentIndex(1);}
     });
     ui->FilesTagFilter->setChecked(false);

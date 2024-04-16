@@ -21,7 +21,7 @@
 #include <QColor>
 #include <QTextBlockUserData>
 #include "latexeditorwidget.h"
-#include "hunspell/hunspell.hxx"
+#include "../pdfium/hunspell/hunspell.hxx"
 
 class QTextDocument;
 class LatexEditor;

@@ -160,7 +160,7 @@ PreambleSettings::PreambleSettings(QWidget *parent,QString PreambleContent) :
             return;
         }
     });
-    ui->splitter->setSizes(QList<int>{0.25*size().width(),0.75*size().width()});
+    ui->splitter->setSizes(QList<int>{(int)(0.25*size().width()),(int)(0.75*size().width())});
     ui->PreambleContentWidget->toolBar->Save->setVisible(false);
     if(!PreambleContent.isEmpty() /*&& notexists*/){
         ui->PreambleContentWidget->editor->setText(PreambleContent);

@@ -64,8 +64,8 @@ void LatexTextBrowser::ShowDifferences(LatexTextBrowser *widget1, LatexTextBrows
     cursorList.clear();
     QString ContentInFile = widget1->toPlainText();
     QString ContentInDatabase = widget2->toPlainText();
-    QStringList lines1 = ContentInFile.split("\n", QString::SkipEmptyParts);
-    QStringList lines2 = ContentInDatabase.split("\n", QString::SkipEmptyParts);
+    QStringList lines1 = ContentInFile.split("\n", Qt::SkipEmptyParts);
+    QStringList lines2 = ContentInDatabase.split("\n", Qt::SkipEmptyParts);
 
     for (int i = 0; i < lines1.size(); ++i) {
         bool foundMatch = false;

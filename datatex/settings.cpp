@@ -116,7 +116,7 @@ Settings::Settings(QWidget *parent)
     QDirIterator lang_list(":/languages/" , QStringList() << "*.qm", QDir::Files, QDirIterator::Subdirectories);
     while (lang_list.hasNext()){
         QString Lang = QFileInfo(lang_list.next()).baseName().remove("DataTex_");
-        QStringList parts = QLocale(Lang).nativeLanguageName().split(' ', QString::SkipEmptyParts);
+        QStringList parts = QLocale(Lang).nativeLanguageName().split(' ', Qt::SkipEmptyParts);
         for (int i = 0; i < parts.size(); ++i){
             parts[i].replace(0, 1, parts[i][0].toUpper());
         }

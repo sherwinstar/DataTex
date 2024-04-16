@@ -7864,6 +7864,10 @@ moc_edithistory.cpp: datatex/edithistory.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtQml.framework/Headers/qjsengine.h \
 		datatex/latexhighlighter.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers/QTextBlockUserData \
+		pdfium/hunspell/hunspell.hxx \
+		pdfium/hunspell/hunvisapi.h \
+		pdfium/hunspell/w_char.hxx \
+		pdfium/hunspell/atypes.hxx \
 		datatex/textblockselection.h \
 		moc_predefs.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/bin/moc
@@ -9512,6 +9516,10 @@ moc_latexhighlighter.cpp: datatex/latexhighlighter.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qpdfselection.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qtpdfversion.h \
 		pdfviewer/qpdfview.h \
+		pdfium/hunspell/hunspell.hxx \
+		pdfium/hunspell/hunvisapi.h \
+		pdfium/hunspell/w_char.hxx \
+		pdfium/hunspell/atypes.hxx \
 		moc_predefs.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/bin/moc
 	/opt/homebrew/Cellar/qt@5/5.15.13/bin/moc $(DEFINES) --include /Users/slzhou/Workspace/DataTex/moc_predefs.h -I/opt/homebrew/Cellar/qt@5/5.15.13/mkspecs/macx-clang -I/Users/slzhou/Workspace/DataTex -I/Users/slzhou/Workspace/DataTex/datatex -I/Users/slzhou/Workspace/DataTex/quazip -I/Users/slzhou/Workspace/DataTex/custom_widgets -I/Users/slzhou/Workspace/DataTex/pdfviewer -I/Users/slzhou/Workspace/DataTex/qtsingleapplication -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtWidgets.framework/Headers/5.15.13 -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtWidgets.framework/Headers/5.15.13/QtWidgets -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPrintSupport.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtSvg.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtWidgets.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers/5.15.13 -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers/5.15.13/QtGui -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtSql.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtCore.framework/Headers/5.15.13 -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtCore.framework/Headers/5.15.13/QtCore -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtXml.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtConcurrent.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtQml.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtNetwork.framework/Headers -I/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtCore.framework/Headers -I/usr/include/c++/11.1.0 -I/usr/include/c++/11.1.0/x86_64-pc-linux-gnu -I/usr/include/c++/11.1.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed -I/usr/include -F/opt/homebrew/Cellar/qt@5/5.15.13/lib datatex/latexhighlighter.h -o moc_latexhighlighter.cpp
@@ -27953,6 +27961,10 @@ datatex.o: datatex.cpp datatex.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtQml.framework/Headers/qjsengine.h \
 		datatex/latexhighlighter.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers/QTextBlockUserData \
+		pdfium/hunspell/hunspell.hxx \
+		pdfium/hunspell/hunvisapi.h \
+		pdfium/hunspell/w_char.hxx \
+		pdfium/hunspell/atypes.hxx \
 		datatex/textblockselection.h \
 		custom_widgets/minisplitter.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o datatex.o datatex.cpp
@@ -33759,6 +33771,10 @@ edithistory.o: datatex/edithistory.cpp datatex/edithistory.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtQml.framework/Headers/qjsengine.h \
 		datatex/latexhighlighter.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers/QTextBlockUserData \
+		pdfium/hunspell/hunspell.hxx \
+		pdfium/hunspell/hunvisapi.h \
+		pdfium/hunspell/w_char.hxx \
+		pdfium/hunspell/atypes.hxx \
 		datatex/textblockselection.h \
 		ui_edithistory.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtCore.framework/Headers/QDir
@@ -35393,7 +35409,11 @@ latexeditorwidget.o: datatex/latexeditorwidget.cpp /opt/homebrew/Cellar/qt@5/5.1
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qpdfsearchresult.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qpdfselection.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qtpdfversion.h \
-		pdfviewer/qpdfview.h
+		pdfviewer/qpdfview.h \
+		pdfium/hunspell/hunspell.hxx \
+		pdfium/hunspell/hunvisapi.h \
+		pdfium/hunspell/w_char.hxx \
+		pdfium/hunspell/atypes.hxx
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o latexeditorwidget.o datatex/latexeditorwidget.cpp
 
 keygenerator.o: datatex/keygenerator.cpp datatex/keygenerator.h \
@@ -35950,6 +35970,10 @@ latexhighlighter.o: datatex/latexhighlighter.cpp /opt/homebrew/Cellar/qt@5/5.15.
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qpdfselection.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtPdf.framework/Headers/qtpdfversion.h \
 		pdfviewer/qpdfview.h \
+		pdfium/hunspell/hunspell.hxx \
+		pdfium/hunspell/hunvisapi.h \
+		pdfium/hunspell/w_char.hxx \
+		pdfium/hunspell/atypes.hxx \
 		datatex/blockdata.h \
 		/opt/homebrew/Cellar/qt@5/5.15.13/lib/QtGui.framework/Headers/QTextBlock
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o latexhighlighter.o datatex/latexhighlighter.cpp
